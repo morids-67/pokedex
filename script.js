@@ -68,4 +68,10 @@ for (const pokemon of pokemons){
 
 //Funktionen
 
+function displaySinglePokemon(pokemon){
+        console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
+        pokemonCards.classList.toggle("d-none");
+        pokemonDetailview.classList.toggle("d-none");
+}
+
 //Event-Listeners
