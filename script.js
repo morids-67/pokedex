@@ -79,3 +79,7 @@ function createPokemonCard(pokemon){
 }
 
 //Event-Listeners
+
+title.addEventListener("click", function(){
+    createPokemonCard(pokemon);
+});

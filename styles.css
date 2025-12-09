@@ -12,6 +12,10 @@ h1 {
 
 }
 
+h1:hover {
+    cursor: pointer;
+}
+
 #pokemon-cards {
 
     flex-wrap: wrap;
@@ -41,9 +45,6 @@ h1 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-#title {
-
-}
 
 #title-section {
 
