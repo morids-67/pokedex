@@ -81,7 +81,9 @@ function createPokemonCard(pokemon){
 //Event-Listeners
 
 title.addEventListener("click", function(){
-    pokemonCards.classList.toggle("hidden");
-    pokemonDetailview.classList.toggle("hidden");
-    pokemonDetailview.innerHTML= "";
+    if (pokemonCards.classList.contains("hidden")){
+        pokemonCards.classList.toggle("hidden");
+        pokemonDetailview.classList.toggle("hidden"); 
+        pokemonDetailview.innerHTML= "";
+    }
 });
