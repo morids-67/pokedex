@@ -40,32 +40,7 @@ document.body.appendChild(pokemonDetailview);
  
 
 for (const pokemon of pokemons){
-    const card= document.createElement("div");
-    card.classList.add("card");
-
-    const title = document.createElement("h2");
-    title.textContent = pokemon.name;
-
-    const image = document.createElement("img");
-    image.src = pokemon.image;
-
-    const type = document.createElement("p");
-    type.textContent = "Typ: " + pokemon.type;
-
-    if (pokemon.type == "Feuer"){
-        type.style.color = "red";
-    }
-    if (pokemon.type == "Wasser"){
-        type.style.color = "blue";
-    }
-    if(pokemon.type == "Pflanze"){
-        type.style.color = "green";
-    }
-
-
-    card.appendChild(title);
-    card.appendChild(image);
-    card.appendChild(type);
+    const card=  createPokemonCard(pokemon);
     
     card.addEventListener("click", function(){
         displaySinglePokemon(pokemon);
@@ -79,6 +54,12 @@ for (const pokemon of pokemons){
 function displaySinglePokemon(pokemon){
     pokemonCards.classList.toggle("d-none");
     pokemonDetailview.classList.toggle("d-none");
+    const card = createPokemonCard(pokemon);
+
+    pokemonDetailview.appendChild(card);
+}
+
+function createPokemonCard(pokemon){
     const card= document.createElement("div");
     card.classList.add("card");
 
@@ -91,22 +72,10 @@ function displaySinglePokemon(pokemon){
     const type = document.createElement("p");
     type.textContent = "Typ: " + pokemon.type;
 
-    if (pokemon.type == "Feuer"){
-        type.style.color = "red";
-    }
-    if (pokemon.type == "Wasser"){
-        type.style.color = "blue";
-    }
-    if(pokemon.type == "Pflanze"){
-        type.style.color = "green";
-    }
-
-
     card.appendChild(title);
     card.appendChild(image);
     card.appendChild(type);
-
-    pokemonDetailview.appendChild(card);
+    return card;
 }
 
 //Event-Listeners
