@@ -51,7 +51,7 @@ h1 {
 
 }
 
-.container{
+.container {
     display: flex;
     padding: 0% 2%;
     justify-content: center; 
@@ -66,3 +66,6 @@ body {
     background: linear-gradient(135deg, #ff3b30, #ffd700);
 }
 
+.d-none {
+    display: none !important; 
+}
