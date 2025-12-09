@@ -63,9 +63,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ff3b30, #ffd700);
 }
 
-.d-none {
-    display: none !important; 
+
+#pokemon-cards, #pokemon-detail-view {
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+#pokemon-cards.hidden, #pokemon-detail-view.hidden {
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
 }
